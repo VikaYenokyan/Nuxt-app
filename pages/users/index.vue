@@ -1,9 +1,12 @@
 <script>
+definePageMeta({
+  layout: "users",
+});
 </script>
 
 <template>
   <div>
-    <h1>All users</h1>
+    <h1 class="text-3xl">All users</h1>
   </div>
 </template>
 
