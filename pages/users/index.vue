@@ -26,9 +26,9 @@ const users = ref(data.value.users);
 <template>
   <div>
     <h1 class="text-3xl">All users</h1>
-    <ul class="flex flex-wrap gap-5 my-10">
-      <li class='bg-blue-900 text-white rounded-md p-2' v-for="user in users" :key="user.id">
-        <NuxtLink :to="`/users/user-${user.id}`">{{ user.firstName }} {{ user.lastName }}</NuxtLink>
+    <ul class="grid grid-cols-3 my-10 gap-10">
+      <li class="w-full" v-for="user in users" :key="user.id">
+        <UserLink :user="user"/>
       </li>
     </ul>
   </div>
