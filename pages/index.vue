@@ -1,4 +1,8 @@
-<script>
+<script setup>
+const { data } = await useFetch("/api/example", {
+  method: "post",
+  body: { name: "Alex", id: 1 },
+});
 </script>
 
 <template>
@@ -10,8 +14,7 @@
       tabindex="-1"
       aria-labelledby="hs-soft-color-info-label"
     >
-      <span id="hs-soft-color-info-label" class="font-bold">Info</span> alert!
-      You should check in on some of those fields below.
+      {{ data.msg }}
     </div>
   </div>
 </template>
